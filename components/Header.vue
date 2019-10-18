@@ -15,6 +15,17 @@
   </div>
 </template>
 
+<script lang='ts'>
+export default  {
+  created() {
+    function a(b: String) {
+      return b
+    }
+    console.log(a('123'))
+  }
+}
+</script>
+
 <style scoped>
 .root {
   margin: 0 auto;
@@ -37,9 +48,10 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 0 20px;
   width: 100vw;
   height: 80px;
-  max-width: 1200px;
+  max-width: 1240px;
   font-size: 16px;
 }
 

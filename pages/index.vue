@@ -12,7 +12,6 @@ export default {
     'v-logo': Logo
   },
   created() {
-    console.log(this)
   }
 }
 </script>
