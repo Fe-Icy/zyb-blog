@@ -1,10 +1,14 @@
 <template>
-  <div class="root">
+  <header class="header">
     <div class="wrapper">
       <div class="container">
         <div class="main">
-          <a-icon type="github" class="logo" />
-          <div class="guide"></div>
+          <div class="guide">
+            <nuxt-link to="/">首页</nuxt-link>
+            <nuxt-link to="/frontend">前端</nuxt-link>
+            <nuxt-link to="/photography">摄影</nuxt-link>
+            <nuxt-link to="/prose">随笔</nuxt-link>
+          </div>
         </div>
         <div class="user">
           <span>登录</span>
@@ -12,35 +16,34 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script lang='ts'>
 export default  {
-  created() {
-    function a(b: String) {
-      return b
-    }
-    console.log(a('123'))
+  data() {
+    return {}
   }
 }
 </script>
 
 <style scoped>
-.root {
+.header {
   margin: 0 auto;
   width: 100vw;
-  height: 80px;
-  background: #fff;
+  height: 50px;
 }
 
 .wrapper {
   position: fixed ;
+  z-index: 1000;
   top: 0;
   width: 100vw;
-  height: 80px;
-  box-shadow: 0 1px 1px 1px #e2e8f0;
-  background: #fff;
+  height: 50px;
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  background-color: rgba(14,21,27,.6);
+  color: #fff;
+  opacity: 0.85;
 }
 
 .container {
@@ -50,13 +53,37 @@ export default  {
   margin: 0 auto;
   padding: 0 20px;
   width: 100vw;
-  height: 80px;
+  height: 50px;
   max-width: 1240px;
-  font-size: 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide {
+  margin-left: 40px;
+}
+
+.guide a {
+  color: #fff;
+  display: inline-block;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.guide a + a {
+  margin-left: 40px;
 }
 
 .logo svg {
-  font-size: 50px;
+  font-size: 30px;
+  color: skyblue;
 }
 
 .user span {

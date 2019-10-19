@@ -1,24 +1,9 @@
 <template>
-  <div>
-    <v-header />
-    <nuxt />
-  </div>
+  <nuxt />
 </template>
-
-<script>
-import Header from '~/components/Header.vue'
-
-export default {
-  components: {
-    'v-header': Header
-  }
-}
-</script>
 
 <style>
 html {
-  /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif; */
   font-family: Quicksand,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   font-size: 16px;
   word-spacing: 1px;
@@ -27,6 +12,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+body {
   min-height: 100vh;
 }
 
@@ -64,5 +52,10 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+a:focus {
+  outline: none;
+  touch-action: none;
 }
 </style>

@@ -5,5 +5,7 @@
 </template>
 
 <style scoped>
-
+.root {
+  background: red;
+}
 </style>
