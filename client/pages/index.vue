@@ -3,7 +3,7 @@
     <section class="top">
       <Header />
       <div class="title">
-        阿冰的个人博客
+        前端技术博客
       </div>
       <div class="slogan">
         率性而为，享受生活
