@@ -4,10 +4,13 @@
       <div class="container">
         <div class="main">
           <div class="guide">
-            <nuxt-link to="/">首页</nuxt-link>
-            <nuxt-link to="/frontend">前端</nuxt-link>
-            <nuxt-link to="/photography">摄影</nuxt-link>
-            <nuxt-link to="/prose">随笔</nuxt-link>
+            <nuxt-link
+              v-for="nav in navs"
+              :key="nav.path"
+              :to="nav.path"
+            >
+              {{nav.name}}
+            </nuxt-link>
           </div>
         </div>
         <div class="user">
@@ -19,10 +22,18 @@
   </header>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 export default  {
   data() {
-    return {}
+    return {
+      navs: [
+        { name: '首页', path: '/' },
+        { name: '前端', path: '/frontend' },
+        { name: '摄影', path: '/photography' },
+        { name: '随笔', path: '/prose' },
+        { name: '文章例子', path: '/article/123' },
+      ]
+    }
   }
 }
 </script>

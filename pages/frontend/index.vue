@@ -7,11 +7,7 @@
 import Header from '~/components/Header.vue'
 
 export default {
-  components: {
-    'v-header': Header
-  },
-  created() {
-  }
+  components: { Header }
 }
 </script>
 

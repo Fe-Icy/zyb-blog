@@ -23,6 +23,7 @@ body {
 *:after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 .button--green {
@@ -57,5 +58,14 @@ body {
 a:focus {
   outline: none;
   touch-action: none;
+}
+
+ul, ol {
+  margin: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
 }
 </style>

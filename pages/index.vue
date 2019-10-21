@@ -1,22 +1,27 @@
 <template>
   <div class="home">
     <section class="top">
-      <v-header />
+      <Header />
       <div class="title">
-        小冰的个人博客
+        阿冰的个人博客
       </div>
       <div class="slogan">
-        随性大方，享受生活
+        率性而为，享受生活
       </div>
       <div class="contacts">
-        <a-icon
+        <a
           class="contact"
           v-for="contact in contacts" 
-          :key="contact.icon" 
-          :type="contact.icon"
-          :style="{'font-size': contact.size + 'px'}"
-          @click="contact.click"
-        />
+          :key="contact.icon"
+          :href="contact.href"
+          target="__blank"
+        >
+          <a-icon
+            :type="contact.icon"
+            :style="{'font-size': contact.size + 'px'}"
+            @click="contact.click"
+          />
+        </a>
       </div>
     </section>
     <section class="footer">
@@ -32,33 +37,14 @@ export default {
   data() {
     return {
       contacts: [
-        { icon: 'github', click: () => {}, size: 30 },
-        { icon: 'wechat', click: this.showWechatCode, size: 36 },
-        { icon: 'weibo', click: () => {}, size: 36 },
-        { icon: 'qq', click: () => {}, size: 34 }
+        { icon: 'github', href: 'https://github.com/Fe-Icy', size: 30 },
+        { icon: 'wechat', href: '/', size: 36 },
+        { icon: 'weibo', href: '/', size: 36 },
+        { icon: 'zhihu', href: 'https://zhuanlan.zhihu.com/front-end-font-end', size: 34 }
       ]
     }
   },
-  components: {
-    'v-header': Header
-  },
-  methods: {
-    showWechatCode(e) {
-      this.$confirm({
-        title: 'Do you Want to delete these items?',
-        content: h => <div style="color:red;">Some descriptions</div>,
-        onOk() {
-          console.log('OK');
-        },
-        onCancel() {
-          console.log('Cancel');
-        },
-        class: 'test',
-      });
-    }
-  },
-  created() {
-  }
+  components: { Header }
 }
 </script>
 
@@ -74,14 +60,14 @@ export default {
 .top {
   width: 100vw;
   height: 100vh;
-  background: transparent url('../images/web_bg.jpg') no-repeat center/cover;
-  filter: brightness(0.9);
+  background: transparent url("../images/web_bg.jpg") no-repeat center/cover;
+  filter: brightness(0.95);
 }
 
 .top::after {
   position: fixed;
   z-index: -1;
-  content: ' ';
+  content: " ";
   top: 0;
   left: 0;
   width: 100%;
