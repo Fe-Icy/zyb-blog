@@ -24,13 +24,17 @@ module.exports = {
   */
   css: [
     'ant-design-vue/dist/antd.css',
-    '~/assets/main.css'
+    '~/assets/main.css',
+    'quill/dist/quill.snow.css',
+    'quill/dist/quill.bubble.css',
+    'quill/dist/quill.core.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/antd-ui'
+    '@/plugins/antd-ui',
+    { src: '~plugins/vue-quill-editor.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

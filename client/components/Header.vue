@@ -32,6 +32,7 @@ export default  {
         { name: '摄影', path: '/photography' },
         { name: '随笔', path: '/prose' },
         { name: '文章例子', path: '/article/123' },
+        { name: '编辑器', path: '/editor' },
       ]
     }
   }

@@ -14,8 +14,10 @@
     "@nuxt/typescript-build": "^0.3.1",
     "ant-design-vue": "^1.1.10",
     "cross-env": "^5.2.0",
+    "highlight.js": "^9.15.10",
     "koa": "^2.6.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-quill-editor": "^3.0.6"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"

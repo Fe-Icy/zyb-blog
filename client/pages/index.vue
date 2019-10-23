@@ -19,12 +19,11 @@
           <a-icon
             :type="contact.icon"
             :style="{'font-size': contact.size + 'px'}"
-            @click="contact.click"
           />
         </a>
       </div>
     </section>
-    <section class="footer">
+    <section class="bottom">
     
     </section>
   </div>
@@ -39,7 +38,7 @@ export default {
       contacts: [
         { icon: 'github', href: 'https://github.com/Fe-Icy', size: 30 },
         { icon: 'wechat', href: '/', size: 36 },
-        { icon: 'weibo', href: '/', size: 36 },
+        // { icon: 'weibo', href: '/', size: 36 },
         { icon: 'zhihu', href: 'https://zhuanlan.zhihu.com/front-end-font-end', size: 34 }
       ]
     }

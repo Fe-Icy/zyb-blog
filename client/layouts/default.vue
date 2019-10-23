@@ -24,6 +24,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 .button--green {
@@ -67,5 +68,16 @@ ul, ol {
 
 h1, h2, h3, h4, h5 {
   margin: 0;
+}
+
+/* 编辑器中代码块的样式，覆盖一下 */
+pre.ql-syntax {
+  background: #ddd !important;
+  color: #1a1a1a !important;
+}
+
+.ql-toolbar {
+  border: 0px solid transparent !important;
+  border-bottom: 1px solid #dfdfd4!important;
 }
 </style>

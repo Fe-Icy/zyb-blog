@@ -1,3 +1,72 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd {
+  /* 默认有边距，都要清除 */
+  margin: 0;
+  padding: 0;
+  /*字体设置*/
+  font-size: 14px;
+  font-family: "Microsoft Yahei",sans-serif;
+  /* 去掉列表的原点 */
+  list-style: none;
+  /* 默认鼠标 */
+  cursor: default;
+}
+
+/*行内块元素*/
+input, img {
+  margin: 0;
+  padding: 0;
+  outline-style: none;
+  vertical-align: bottom; 
+}
+
+/*行内元素*/
+a, a:active, a:visited {
+  /*下划线和颜色*/
+  text-decoration: none;
+}
+
+a:hover {
+  color:#333;
+}
+
+textarea {
+  border:none;
+  outline: none;
+  resize: none;
+}
+
+i {
+  /*文字样式*/
+  font-style: normal; 
+}
+
+table{
+  /*边框合并*/
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* 使用伪元素清除浮动 */
+.clearfix::before,
+.clearfix::after {
+  content:"";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: none;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+label{
+  display: inline-block;
+  cursor: pointer;
+}
+
+
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
 }
